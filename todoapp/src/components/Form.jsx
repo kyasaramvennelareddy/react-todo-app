@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Form.module.css";
 
 export default function form({ todos, setTodos }) {
-  const [todo, setTodo] = useState({ name: "", done: false });
+  const [todo, setTodo] = useState({ id: "", name: "", done: false });
 
   function handlesubmit(e) {
     if (todo.name.trim() === "") {
@@ -10,8 +10,8 @@ export default function form({ todos, setTodos }) {
       return;
     } else {
       e.preventDefault();
-      setTodos([...todos, todo]);
-      setTodo({ name: "", done: false });
+      setTodos([...todos, {id: Date.now(), name: todo.name, done: false }]);
+      setTodo({ id: "", name: "", done: false });
       console.log(todos);
     }
   }
@@ -21,7 +21,7 @@ export default function form({ todos, setTodos }) {
       <div className={styles.inputcontainer}>
         <input
           className={styles.moderninput}
-          onChange={(e) => setTodo({ name: e.target.value, done: false })}
+          onChange={(e) => setTodo({ id: "", name: e.target.value, done: false })}
           value={todo.name}
           type="text"
           placeholder="Enter Todo Item"

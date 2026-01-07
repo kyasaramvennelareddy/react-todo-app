@@ -25,3 +25,33 @@
 .completed{
     text-decoration: line-through;
 }
+.editButton{
+    float: right;
+    padding:  12px 20px;
+    background-color:rgb(226, 226, 12);
+    border:none;
+    border-radius: 4px;
+    color: white;
+    margin-top: -5px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.editInput {
+  width: 40%;
+  padding: 5px 6px;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 4px;
+  outline: none;
+}
+.saveButton {
+  margin-left: 15px;
+  padding: 5px 10px;
+  background-color: rgb(226, 226, 12);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
